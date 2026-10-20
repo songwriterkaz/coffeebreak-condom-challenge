@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coffeebreak Safe Sex Skills: Condom Challenge</title>
+<style>
+:root{--pink:#f7b6cf;--deep:#c2477e;--mint:#bfe8d6;--cream:#fff7fb;--lav:#d9ccf5}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(160deg,#ffe6f1,#e9e3ff 60%,#ddf6ec);color:#4a2b3c;min-height:100vh}
+header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#fff8;backdrop-filter:blur(4px)}
+header img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--deep)}
+header h1{font-size:1.05rem;margin:0;line-height:1.2}header small{display:block;color:var(--deep);font-weight:600}
+nav{display:flex;flex-wrap:wrap;gap:6px;padding:8px 14px}
+button{font:inherit;border:0;border-radius:14px;padding:10px 14px;background:#fff;color:#4a2b3c;box-shadow:0 2px 6px #c2477e33;cursor:pointer}
+button.pri{background:var(--deep);color:#fff}button:active{transform:scale(.97)}
+nav button.on{background:var(--pink)}
+main{max-width:820px;margin:0 auto;padding:10px 14px 40px}
+.card{background:#fffc;border-radius:20px;padding:16px;margin:10px 0;box-shadow:0 4px 14px #c2477e22}
+.age{display:inline-block;background:var(--mint);border-radius:10px;padding:3px 9px;font-size:.85rem;font-weight:700}
+#stage{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){#stage{grid-template-columns:1fr}}
+svg{width:100%;height:auto;max-height:300px;background:#fff;border-radius:16px}
+#opts{display:flex;flex-direction:column;gap:8px}
+#opts button{text-align:left}#opts button.drag{touch-action:none}
+#drop{border:3px dashed var(--deep);border-radius:16px;padding:14px;text-align:center;color:var(--deep);font-weight:600;margin-bottom:8px}
+#drop.hot{background:var(--pink)}
+.fb{min-height:48px;padding:10px;border-radius:12px;margin-top:8px}.ok{background:#d8f5e6}.no{background:#ffe1e1}
+.prog{height:10px;background:#fff;border-radius:6px;overflow:hidden}.prog i{display:block;height:100%;background:var(--deep);transition:width .3s}
+a{color:var(--deep)}ul{padding-left:20px}li{margin:6px 0}
+footer{text-align:center;font-size:.8rem;padding:14px;color:#7a5b6b}
+</style></head><body>
+<header><img src="cb-logo.jpg" alt="Coffeebreak logo"><h1>Coffeebreak Safe Sex Skills<small>Condom Challenge</small></h1></header>
+<nav><button data-v="home" class="on">Home</button><button data-v="game">Steps game</button><button data-v="quiz">Quiz</button><button data-v="consent">Consent</button><button data-v="help">Free condoms and advice</button></nav>
+<main>
+<section id="home" class="v card"><span class="age">Ages 14+ · secondary school sex education</span>
+<h2>Learn to use a condom the right way</h2>
+<p>This is a practice game, like the condom demonstration you might see in a school or clinic. You use a training model (or a banana) and put the steps in the right order.</p>
+<p>Condoms help prevent STIs (sexually transmissible infections) and unplanned pregnancy when used correctly every time.</p>
+<p>Steps are based on NSW Health Play Safe guidance.</p>
+<button class="pri" onclick="show('game')">Start the steps game</button> <button onclick="show('quiz')">Try the quiz</button></section>
+
+<section id="game" class="v card" hidden>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap"><b id="phase">Before</b>
+<label>Model: <select id="model"><option value="wood">Wooden training model</option><option value="banana">Banana</option></select></label></div>
+<div class="prog" style="margin:8px 0"><i id="bar" style="width:0"></i></div>
+<div id="stage"><div><svg id="art" viewBox="0 0 200 200"></svg></div>
+<div><div id="drop">Drag the next step here, or tap it</div><div id="opts"></div></div></div>
+<div id="fb" class="fb">Pick the first step.</div></section>
+
+<section id="quiz" class="v card" hidden><h2>Myths and facts</h2><div id="q"></div></section>
+
+<section id="consent" class="v card" hidden><h2>Consent comes first</h2>
+<ul><li>Consent means everyone freely and clearly agrees. It's an enthusiastic yes, not silence or maybe.</li>
+<li>Anyone can change their mind at any time, even partway through. Stop and check in.</li>
+<li>Someone who is asleep, very drunk or high, or being pressured can't give consent.</li>
+<li>In NSW the age of consent is 16.</li>
+<li>You never have to do anything you don't want to do. Saying no is always okay.</li></ul>
+<p>If something has happened that didn't feel okay, you can talk to Kids Helpline any time on 1800 55 1800.</p></section>
+
+<section id="help" class="v card" hidden><h2>Where to get free condoms and advice</h2>
+<ul>
+<li><b>Play Safe (NSW Health)</b>: info for young people, how to use condoms and where to get free ones.<br><a href="https://playsafe.health.nsw.gov.au/condoms/how-to-use-condoms/" target="_blank" rel="noopener">playsafe.health.nsw.gov.au</a></li>
+<li><b>NSW Sexual Health Infolink</b>: free, confidential advice and help finding a clinic. Call <a href="tel:1800451624">1800 451 624</a><br><a href="https://www.shil.nsw.gov.au/" target="_blank" rel="noopener">shil.nsw.gov.au</a></li>
+<li><b>NSW sexual health clinics</b>: free and confidential, no Medicare card needed.<br><a href="https://www.health.nsw.gov.au/sexualhealth/Pages/sexual-health-clinics.aspx" target="_blank" rel="noopener">health.nsw.gov.au clinic list</a></li>
+<li><b>Family Planning Australia</b> (formerly Family Planning NSW): clinics and the Talkline on <a href="tel:1300658886">1300 658 886</a><br><a href="https://www.fpnsw.org.au/" target="_blank" rel="noopener">fpnsw.org.au</a></li>
+<li><b>Kids Helpline</b>: for young people up to 25, 24/7, any reason. Call <a href="tel:1800551800">1800 55 1800</a><br><a href="https://kidshelpline.com.au/" target="_blank" rel="noopener">kidshelpline.com.au</a></li>
+</ul><p>In an emergency call 000.</p></section>
+</main>
+<footer>Coffeebreak · educational resource, not medical advice · ages 14+</footer>
+<script>
+const STEPS=[
+{t:"Check the expiry date and that the packet isn't damaged",w:"First check the expiry date and look for tears or a dried-out packet. Expired or damaged condoms break more easily."},
+{t:"Push the condom to one side and tear the packet at the edge",w:"Next, open it. Push the condom aside and tear at the notched edge with your fingers, no teeth, scissors or sharp nails."},
+{t:"Check which way it unrolls (rim on the outside)",w:"Before it goes on, check it's the right way up. It should look like a little hat with the rolled rim on the outside. If you put it on inside out, bin it and use a new one."},
+{t:"Pinch the tip to squeeze out the air",w:"Pinch the tip before rolling. Trapped air can make a condom break."},
+{t:"Roll it all the way down to the base",w:"Now roll it down to the base of the model. It should cover the whole length."},
+{t:"Afterwards, hold the base while withdrawing",w:"After sex, hold the rim at the base while withdrawing so it can't slip off."},
+{t:"Take it off carefully",w:"Now remove it carefully, away from your partner."},
+{t:"Tie a knot in it",w:"Tie a knot so nothing spills."},
+{t:"Wrap it and put it in the bin",w:"Wrap it in a tissue and put it in the bin."}];
+const TRAPS=[
+["Open the packet with your teeth","Teeth can tear the condom. Use your fingers at the edge of the packet."],
+["Cut the packet open with scissors","Scissors can cut the condom inside. Tear at the edge with your fingers."],
+["Put on two condoms for extra safety","Two condoms rub together and are more likely to break. One at a time."],
+["Use baby oil or Vaseline as lube","Oil-based products damage latex. Use water-based or silicone-based lube."],
+["Flush it down the toilet","Never flush condoms. They block pipes and harm waterways. Bin it."],
+["Keep it and reuse it later","Condoms are single use. Use a new one every time."]];
+let i=0,lastPick=null;const $=s=>document.querySelector(s);
+function show(v){document.querySelectorAll('.v').forEach(e=>e.hidden=e.id!==v);document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));if(v==='game'&&!$('#opts').children.length)reset();if(v==='quiz')qStart();}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+function shuffle(a){return a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(x=>x[1])}
+function draw(){const m=$('#model').value,s=i;let g='';
+const body=m==='banana'?'<path d="M95 185 C80 130 85 70 110 25 L122 30 C100 80 98 130 112 185Z" fill="#f6d55c" stroke="#b9962a" stroke-width="2"/><rect x="106" y="18" width="12" height="10" rx="3" fill="#7a5b2a" transform="rotate(20 112 23)"/>':'<rect x="60" y="178" width="80" height="14" rx="6" fill="#b07a4a"/><rect x="86" y="40" width="28" height="140" rx="14" fill="#d9a46b" stroke="#a5713f" stroke-width="2"/>';
+g+=body;
+if(s<=2){g+=`<rect x="20" y="20" width="50" height="50" rx="6" fill="${s>=2?'#fff':'#f7b6cf'}" stroke="#c2477e" stroke-width="2"/>`;g+=s<1?'<text x="45" y="50" font-size="9" text-anchor="middle" fill="#c2477e">EXP 2029</text>':'';if(s>=2)g+='<path d="M20 20 l15 -10" stroke="#c2477e" stroke-width="2"/>';}
+if(s>=2&&s<5){g+='<ellipse cx="45" cy="100" rx="18" ry="6" fill="none" stroke="#c2477e" stroke-width="4"/><path d="M33 100 Q45 75 57 100" fill="#f7b6cf88" stroke="#c2477e"/>';if(s>=3)g+='<circle cx="45" cy="82" r="5" fill="#c2477e"/>'}
+if(s>=4&&s<=6){const h=s>=5?135:40;g+=`<rect x="${m==='banana'?96:84}" y="${m==='banana'?40:38}" width="${m==='banana'?24:32}" height="${h}" rx="14" fill="#f7b6cf88" stroke="#c2477e" stroke-width="2"/>`}
+if(s>=7)g+='<circle cx="150" cy="70" r="12" fill="#f7b6cf" stroke="#c2477e" stroke-width="2"/>';
+if(s>=8)g+='<path d="M140 140 h40 l-5 50 h-30z" fill="#bfe8d6" stroke="#4a8"/><text x="160" y="170" font-size="10" text-anchor="middle">BIN</text>';
+if(s>=9)g+='<text x="100" y="20" font-size="14" text-anchor="middle" fill="#c2477e">All steps done</text>';
+$('#art').innerHTML=g}
+function opts(){const o=$('#opts');o.innerHTML='';if(i>=STEPS.length){o.innerHTML='<button class="pri" onclick="reset()">Play again</button><button onclick="show(\'quiz\')">Go to the quiz</button>';return}
+const pool=[{k:'s',n:i}];const others=STEPS.map((_,n)=>n).filter(n=>n!==i&&Math.abs(n-i)<=3);shuffle(others).slice(0,2).forEach(n=>pool.push({k:'s',n}));pool.push({k:'t',n:Math.floor(Math.random()*TRAPS.length)});
+shuffle(pool).forEach(p=>{const b=document.createElement('button');b.className='drag';b.textContent=p.k==='s'?STEPS[p.n].t:TRAPS[p.n][0];b.onclick=()=>pick(p);dragify(b,p);o.appendChild(b)})}
+function dragify(b,p){let sx,sy,moved=false;b.addEventListener('pointerdown',e=>{sx=e.clientX;sy=e.clientY;moved=false;b.setPointerCapture(e.pointerId)});
+b.addEventListener('pointermove',e=>{if(sx==null)return;const dx=e.clientX-sx,dy=e.clientY-sy;if(Math.hypot(dx,dy)>8){moved=true;b.style.transform=`translate(${dx}px,${dy}px)`;const r=$('#drop').getBoundingClientRect();$('#drop').classList.toggle('hot',e.clientX>r.left&&e.clientX<r.right&&e.clientY>r.top&&e.clientY<r.bottom)}});
+b.addEventListener('pointerup',e=>{if(sx==null)return;b.style.transform='';const hot=$('#drop').classList.contains('hot');$('#drop').classList.remove('hot');sx=null;if(moved){b.onclick=null;setTimeout(()=>b.onclick=()=>pick(p),0);if(hot)pick(p)}})}
+function fb(msg,ok){const f=$('#fb');f.textContent=msg;f.className='fb '+(ok?'ok':'no')}
+function pick(p){if(p.k==='t'){fb('Not quite. '+TRAPS[p.n][1],false);return}
+if(p.n===i){i++;fb('Nice. '+STEPS[p.n].t+'.'+(i===STEPS.length?' Remember, never flush it. You finished every step.':''),true)}
+else fb('Not yet. '+STEPS[i].w,false);
+$('#phase').textContent=i<5?'Before':'Afterwards';$('#bar').style.width=(i/STEPS.length*100)+'%';draw();opts()}
+function reset(){i=0;$('#bar').style.width='0';$('#phase').textContent='Before';fb('Pick the first step.',true);draw();opts()}
+$('#model').onchange=draw;
+const QS=[
+["Using two condoms at once is safer.",false,"Myth. Two condoms rub together and are more likely to break. Use one at a time."],
+["With latex condoms, use water-based or silicone-based lube.",true,"Fact. Oil-based products like Vaseline, baby oil or hand cream weaken latex."],
+["Condoms help prevent STIs as well as pregnancy.",true,"Fact. Condoms are one of the best ways to reduce the spread of most STIs."],
+["You can reuse a condom if you wash it.",false,"Myth. Condoms are single use. Use a new one every time."],
+["It's fine to open the packet with your teeth.",false,"Myth. Teeth, scissors and sharp nails can tear the condom."],
+["Condoms can expire.",true,"Fact. Check the date on the packet. Expired condoms break more easily."],
+["Condoms can be flushed down the toilet.",false,"Myth. Tie it, wrap it and put it in the bin."],
+["Keeping a condom in your wallet for months is fine.",false,"Myth. Heat and rubbing damage them. Store them somewhere cool and dry."],
+["Free condoms are available in NSW.",true,"Fact. Sexual health clinics and Play Safe can point you to free condoms."],
+["Consent can be taken back at any time.",true,"Fact. Anyone can change their mind at any point. Stop and check in."]];
+let qi=0,score=0;
+function qStart(){qi=0;score=0;qShow()}
+function qShow(){const q=$('#q');if(qi>=QS.length){q.innerHTML=`<p><b>You got ${score} out of ${QS.length}.</b></p><button class="pri" onclick="qStart()">Try again</button> <button onclick="show('help')">Free condoms and advice</button>`;return}
+const [s]=QS[qi];q.innerHTML=`<p>Question ${qi+1} of ${QS.length}</p><h3>${s}</h3><button class="pri" id="qf">Fact</button> <button class="pri" id="qm">Myth</button><div id="qfb" class="fb"></div>`;
+$('#qf').onclick=()=>qAns(true);$('#qm').onclick=()=>qAns(false)}
+function qAns(a){const [,t,e]=QS[qi];const ok=a===t;if(ok)score++;$('#qfb').className='fb '+(ok?'ok':'no');$('#qfb').textContent=(ok?'Correct. ':'Not quite. ')+e;$('#qf').disabled=$('#qm').disabled=true;const n=document.createElement('button');n.textContent='Next';n.style.marginTop='8px';n.onclick=()=>{qi++;qShow()};$('#q').appendChild(n)}
+</script></body></html>
